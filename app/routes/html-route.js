@@ -3,15 +3,15 @@ var express = require("express")
 var router = express.Router();
 
 router.get("/", function(req, res) {
-  res.sendFile(path.join(__dirname, "home.html"));
+  res.sendFile(path.join(__dirname, "../view/index.html"));
 });
 
 router.get("/view", function(req, res) {
-  res.sendFile(path.join(__dirname,"view.html"));
+  res.sendFile(path.join(__dirname,"../view/view.html"));
 });
 
 router.get("/make", function(req, res) {
-  res.sendFile(path.join(__dirname,"make.html"));
+  res.sendFile(path.join(__dirname,"../view/make.html"));
 });
 
 // Displays a single character, or returns false
