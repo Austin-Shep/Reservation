@@ -15,18 +15,10 @@ router.get("/make", function(req, res) {
 });
 
 // Displays a single character, or returns false
-router.get("/api/rsv/:person", function(req, res) {
-  var chosen = req.params.person;
+router.get("/rsv", function(req, res) {
+  
+ return res.json(rsv);
 
-  console.log(chosen);
-
-  for (var i = 0; i < rsv.length; i++) {
-    if (chosen === rsv[i].name) {
-      return res.json(rsv[i]);
-    }
-  }
-
-  return res.json(false);
 });
 
 router.post("/rsv" , function(req,res){
