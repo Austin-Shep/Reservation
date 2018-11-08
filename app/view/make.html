@@ -69,7 +69,7 @@ $("#add").on('click', function(event){
   };
 
 
-  jQuery.post("/rsv" , newRsv)
+  $.post("/rsv" , newRsv)
   .then(function(data){
     console.log("make.html", data)
     alert("Thank You We Will love to see you then ")
