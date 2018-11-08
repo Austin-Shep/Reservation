@@ -1,5 +1,6 @@
+//server stuff
 var express = require("express");
-var path = require("path");
+var routes = require("./app/routes/html-route.js")(app);
 
 var app = express();
 var PORT = 3000;
@@ -7,8 +8,5 @@ var PORT = 3000;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-require('./app/routes/html-route.js')(app);
-
-app.listen(PORT, function() {
-	console.log("App listening on PORT: " + PORT);
-});
+app.listen(PORT);
+console.log('Server started! At http://localhost:' + PORT);
